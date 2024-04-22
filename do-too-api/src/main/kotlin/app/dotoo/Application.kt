@@ -1,6 +1,5 @@
 package app.dotoo
 
-import app.dotoo.config.ApiConfig
 import app.dotoo.config.core.ConfigurationManager
 import app.dotoo.config.core.ConfigurationReader
 
@@ -17,11 +16,10 @@ fun main() {
     /**
      * Load configuration properties (environment)
      */
-    val configInitializer =
-        ConfigurationManager(
-            packageName = ConfigurationManager.DEFAULT_CONFIG_PACKAGE,
-            ConfigurationReader::read,
-        )
+    val configInitializer = ConfigurationManager(
+        packageName = ConfigurationManager.DEFAULT_CONFIG_PACKAGE,
+        configurationReader = ConfigurationReader::read
+    )
 
     configInitializer.initialize()
 }
