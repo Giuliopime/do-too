@@ -7,7 +7,7 @@ plugins {
     alias(libs.plugins.ksp)
 }
 
-group = "dev.giuliopime"
+group = "app.dotoo"
 version = "1.0"
 
 application {
