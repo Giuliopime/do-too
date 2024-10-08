@@ -13,7 +13,4 @@ object ApiConfig {
 
     @ConfigurationProperty("session.max.age.in.seconds")
     var sessionMaxAgeInSeconds: Long = 2592000 // 30 days by default
-
-    @ConfigurationProperty("admin.key")
-    lateinit var adminKey: String
 }
