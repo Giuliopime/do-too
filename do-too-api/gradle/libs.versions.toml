@@ -4,6 +4,7 @@ kotlinxCoroutines="1.7.3"
 kotlinxDatetime="0.5.0"
 reflections="0.10.2"
 ksp="1.9.0-1.0.13"
+serialization="1.6.3"
 
 shadow="8.1.1"
 
@@ -72,6 +73,7 @@ flyway-postgres = { group = "org.flywaydb", name = "flyway-database-postgresql",
 jedis = { group = "redis.clients", name = "jedis", version.ref = "jedis" }
 amqp-client = { group = "com.rabbitmq", name = "amqp-client", version.ref = "amqpClient" }
 
+serialization = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "serialization" }
 ktor-serialization = { group = "io.ktor", name = "ktor-serialization-kotlinx-json", version.ref = "ktor" }
 
 ktor-server-core = { group = "io.ktor", name = "ktor-server-core", version.ref = "ktor" }
@@ -141,6 +143,7 @@ ktor-server = [
     "ktor-server-forwarded-header",
     "ktor-server-call-logging",
     "ktor-server-status-pages",
+    "serialization",
     "ktor-serialization",
     "ktor-server-content-negotiation",
     "ktor-server-cors",

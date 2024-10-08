@@ -18,6 +18,11 @@ kotlin {
     jvmToolchain(20)
 }
 
+// Use KSP Generated sources
+sourceSets.main {
+    java.srcDirs("build/generated/ksp/main/kotlin")
+}
+
 repositories {
     mavenCentral()
 }
@@ -69,7 +74,7 @@ tasks.test {
 
 tasks {
     shadowJar {
-        archiveFileName.set("do-too-api.jar")
+        archiveFileName.set("dotoo-api.jar")
         mergeServiceFiles()
     }
 }
